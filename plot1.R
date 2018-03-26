@@ -1,3 +1,8 @@
+#!/usr/bin/env Rscript
+
+#######################################################################################
+#Author: Wellintton Perez 2018
+
 #This script creates plot1 for coursera.org course4 Week 1
 #Dataset - Electric power consumption
 #This plot is only base on dates between 2007-02-01 and 2007-02-02
