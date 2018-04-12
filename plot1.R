@@ -25,6 +25,23 @@ if(!file.exists(data_file)){
   message("data directory found.")
 }
 
+getLine <- function(pattern){
+  conn<-file(data_file,"r")
+  ln=0
+  exit<-TRUE
+  while(exit){
+    line<-readLines(conn,n=1)
+    buff<-strsplit(line,";")[[1]][1];
+    if(buff==pattern)
+    { 
+      exit=FALSE
+    }
+    ln<-ln+1  
+  }
+  close(conn)
+  return(ln)
+}
+
 start<-getLine("1/2/2007")
 end<-getLine("3/2/2007")-1
 
